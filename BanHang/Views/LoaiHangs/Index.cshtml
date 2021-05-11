@@ -1,0 +1,37 @@
+﻿@model IEnumerable<BanHang.Models.LoaiHang>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>LoaiHang</h2>
+
+<p>
+    @Html.ActionLink("thêm Mới ", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenLoai)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.MaLoai)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TenLoai)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.MaLoai }) |
+        @Html.ActionLink("Details", "Details", new { id = item.MaLoai }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.MaLoai })
+    </td>
+</tr>
+}
+
+</table>
