@@ -4,6 +4,7 @@ namespace BanHang.Models
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
+    using System.Collections.Generic;
 
     public partial class LTQLDbcontect : DbContext
     {
@@ -17,7 +18,7 @@ namespace BanHang.Models
         public virtual DbSet<NhanVien> NhanViens { get; set; }
         public virtual DbSet<LoaiHang> LoaiHangs { get; set; }
         public virtual DbSet<CTHD> CTHDs { get; set; }
-
+        public IEnumerable<object> Accounts { get; internal set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

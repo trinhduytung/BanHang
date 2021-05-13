@@ -1,0 +1,19 @@
+﻿@model BanHang.Models.KhachHang
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Login</h2>
+@using (Html.BeginForm("Login", "Home", FormMethod.Post))
+{
+    <div>
+        @Html.LabelFor(m => m.Email, "Email")
+        @Html.TextBoxFor(m => m.Email)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Password, "Password")
+        @Html.PasswordFor(m => m.Password)
+    </div>
+    <input type="submit" value="Đăng nhập"/>
+}

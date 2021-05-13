@@ -129,9 +129,11 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\conectDb.cs" />
     <Compile Include="Controllers\CTHDsController.cs" />
     <Compile Include="Controllers\HoaDonsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KhachHangs.cs" />
     <Compile Include="Controllers\KhachHangsController.cs" />
     <Compile Include="Controllers\LoaiHangsController.cs" />
     <Compile Include="Controllers\MatHangsController.cs" />
@@ -143,10 +145,19 @@
     <Compile Include="Migrations\202105041623251_create_data.Designer.cs">
       <DependentUpon>202105041623251_create_data.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105111339167_change-table.cs" />
+    <Compile Include="Migrations\202105111339167_change-table.Designer.cs">
+      <DependentUpon>202105111339167_change-table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105111644381_table.cs" />
+    <Compile Include="Migrations\202105111644381_table.Designer.cs">
+      <DependentUpon>202105111644381_table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\CTHD.cs" />
     <Compile Include="Models\HoaDon.cs" />
+    <Compile Include="Models\keyAttribute.cs" />
     <Compile Include="Models\KhachHang.cs" />
     <Compile Include="Models\LoaiHang.cs" />
     <Compile Include="Models\LTQLDbcontect.cs" />
@@ -221,6 +232,7 @@
     <Content Include="Views\NhanViens\Edit.cshtml" />
     <Content Include="Views\NhanViens\Index.cshtml" />
     <Content Include="Views\Home\Register.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -242,6 +254,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202105041623251_create_data.resx">
       <DependentUpon>202105041623251_create_data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105111339167_change-table.resx">
+      <DependentUpon>202105111339167_change-table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105111644381_table.resx">
+      <DependentUpon>202105111644381_table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
